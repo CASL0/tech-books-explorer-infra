@@ -1,0 +1,4 @@
+files/tech-books.csv linguist-detectable=false
+
+README.md linguist-generated=true
+.terraform.lock.hcl linguist-generated=true
