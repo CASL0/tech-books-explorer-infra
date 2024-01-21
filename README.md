@@ -12,12 +12,14 @@
 
 | Name | Version |
 |------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.33.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.6.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_cloudfront"></a> [cloudfront](#module\_cloudfront) | terraform-aws-modules/cloudfront/aws | ~> 3.2.1 |
 | <a name="module_csv_s3_bucket"></a> [csv\_s3\_bucket](#module\_csv\_s3\_bucket) | terraform-aws-modules/s3-bucket/aws | ~> 4.0.0 |
 | <a name="module_dynamodb"></a> [dynamodb](#module\_dynamodb) | terraform-aws-modules/dynamodb-table/aws | ~> 4.0.0 |
 | <a name="module_frontend_s3_bucket"></a> [frontend\_s3\_bucket](#module\_frontend\_s3\_bucket) | terraform-aws-modules/s3-bucket/aws | ~> 4.0.0 |
@@ -27,7 +29,9 @@
 
 | Name | Type |
 |------|------|
+| [aws_s3_bucket_policy.frontend_bucket_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy) | resource |
 | [random_pet.server](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/pet) | resource |
+| [aws_iam_policy_document.s3_oac_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 
 ## Inputs
 
@@ -39,5 +43,6 @@
 
 | Name | Description |
 |------|-------------|
+| <a name="output_cloudfront_domain"></a> [cloudfront\_domain](#output\_cloudfront\_domain) | Domain of the CloudFront |
 | <a name="output_dynamodb_arn"></a> [dynamodb\_arn](#output\_dynamodb\_arn) | ARN of the DynamoDB table |
 <!-- END_TF_DOCS -->
