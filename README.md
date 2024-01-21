@@ -18,9 +18,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_csv_s3_bucket"></a> [csv\_s3\_bucket](#module\_csv\_s3\_bucket) | terraform-aws-modules/s3-bucket/aws | ~> 4.0.0 |
-| <a name="module_dynamodb"></a> [dynamodb](#module\_dynamodb) | terraform-aws-modules/dynamodb-table/aws | ~> 4.0.0 |
-| <a name="module_s3_import_object_csv"></a> [s3\_import\_object\_csv](#module\_s3\_import\_object\_csv) | terraform-aws-modules/s3-bucket/aws//modules/object | ~> 4.0.0 |
+| <a name="module_frontend_s3_bucket"></a> [frontend\_s3\_bucket](#module\_frontend\_s3\_bucket) | terraform-aws-modules/s3-bucket/aws | ~> 4.0.0 |
 
 ## Resources
 
