@@ -54,3 +54,17 @@ module "s3_import_object_csv" {
 
   content_base64 = filebase64("./files/tech-books.csv")
 }
+
+module "frontend_s3_bucket" {
+  source  = "terraform-aws-modules/s3-bucket/aws"
+  version = "~> 4.0.0"
+
+  bucket = "tech-books-explorer-frontend-bucket-${random_pet.server.id}"
+
+  force_destroy = true
+
+  tags = {
+    Terraform   = "true"
+    Environment = "staging"
+  }
+}
