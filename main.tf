@@ -21,8 +21,8 @@ module "dynamodb" {
   import_table = {
     input_format           = "CSV"
     input_compression_type = "NONE"
-    bucket                 = module.s3_bucket.s3_bucket_id
-    key_prefix             = "tech-books-explorer-bucket-${random_pet.server.id}"
+    bucket                 = module.csv_s3_bucket.s3_bucket_id
+    key_prefix             = module.csv_s3_bucket.s3_bucket_id
     input_format_options = {
       csv = {
         delimiter = ","
@@ -36,7 +36,7 @@ module "dynamodb" {
   }
 }
 
-module "s3_bucket" {
+module "csv_s3_bucket" {
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "~> 4.0.0"
 
@@ -49,8 +49,8 @@ module "s3_import_object_csv" {
   source  = "terraform-aws-modules/s3-bucket/aws//modules/object"
   version = "~> 4.0.0"
 
-  bucket = module.s3_bucket.s3_bucket_id
-  key    = "tech-books-explorer-bucket-${random_pet.server.id}/tech-books.csv"
+  bucket = module.csv_s3_bucket.s3_bucket_id
+  key    = "${module.csv_s3_bucket.s3_bucket_id}/tech-books.csv"
 
   content_base64 = filebase64("./files/tech-books.csv")
 }
