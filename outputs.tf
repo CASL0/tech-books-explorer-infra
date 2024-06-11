@@ -1,9 +1,7 @@
-output "dynamodb_arn" {
-  description = "ARN of the DynamoDB table"
-  value       = module.dynamodb.dynamodb_table_arn
+output "availability_zones" {
+  value = data.aws_availability_zones.available.names
 }
 
-output "cloudfront_domain" {
-  description = "Domain of the CloudFront"
-  value       = module.cloudfront.cloudfront_distribution_domain_name
+output "cluster_endpoint" {
+  value = module.eks.cluster_endpoint
 }
