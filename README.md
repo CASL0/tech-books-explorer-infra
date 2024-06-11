@@ -4,8 +4,9 @@ Tech Books Explorer のインフラです。
 
 ## 構成図
 
-![infra](https://github.com/CASL0/tech-books-explorer-infra/assets/28913760/500e73bf-34ac-4a72-b36e-c757a4f43b27)
+![infra](https://github.com/CASL0/tech-books-explorer-infra/assets/28913760/97cc9eaa-7abe-49c5-9e32-d62c90519043)
 
+<!-- prettier-ignore-start -->
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -47,3 +48,4 @@ No inputs.
 | <a name="output_availability_zones"></a> [availability\_zones](#output\_availability\_zones) | n/a |
 | <a name="output_cluster_endpoint"></a> [cluster\_endpoint](#output\_cluster\_endpoint) | n/a |
 <!-- END_TF_DOCS -->
+<!-- prettier-ignore-end -->
